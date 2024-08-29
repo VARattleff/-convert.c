@@ -19,5 +19,5 @@ src/gui/dkk/dkk_ui.c \
 src/gui/eur/eur_ui.c \
 src/gui/usd/usd_ui.c \
 src/gui/valuta_converter_gui.c \
--o valuta_converter
+-Iinclude -o valuta_converter
 ```

@@ -2,8 +2,10 @@
 // og kalde alt functionalitet
 
 #include <stdio.h>
+#include "valuta_converter.h"
 
-int main () {
-    printf("test compilering\n");
+int main () 
+{
+    display_intro();
     return 0;
 }
