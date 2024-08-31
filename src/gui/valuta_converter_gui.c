@@ -20,12 +20,13 @@ void display_currency_options()
     printf("\n");
     printf("Please select the unit you want to convert by entering the corresponding number and press enter:\n\n");
 
-    printf(" (1) " BLUE "USD" RESET_COLOR  " (US Dollar / Freedom Unit)" "\n");
+    printf(" (1) " BLUE "USD" RESET_COLOR " (US Dollar / Freedom Unit)" "\n");
     printf(" (2) " YELLOW "EUR" RESET_COLOR " Euro" "\n");
     printf(" (3) " RED "DKK" RESET_COLOR " Danish Krone" "\n");
+    printf(" (4) " GREEN "Exit program" RESET_COLOR "\n");
 
     printf("\n");
-    printf("Enter your choice (1-3): ");
+    printf("Enter your choice (1-4): ");
 }
 
 void display_conversion_target_options() 
@@ -39,4 +40,9 @@ void display_conversion_target_options()
 
     printf("\n");
     printf("Enter your choice (1-4): ");
+}
+
+void display_currency_value_input()
+{
+    printf("\n" "Please enter value you want to be converted");
 }

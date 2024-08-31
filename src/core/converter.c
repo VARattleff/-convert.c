@@ -4,12 +4,35 @@
 
 void handle_currency_selection();
 void handle_conversion_target();
+void handle_currency_input();
+
+int exit_program = 0; 
+int step = 1;
 
 int main() 
 {
     display_intro();
-    handle_currency_selection();
-    
+
+    while (!exit_program) 
+    {
+        switch (step)
+        {
+            case 1:
+                handle_currency_selection();
+                step = 2; 
+                break;
+            case 2:
+                handle_conversion_target();
+                step = 3;
+                break;
+            case 3:
+                handle_currency_input();
+            default:
+                exit_program = 1; 
+                break;
+        }
+    }
+
     return 0;
 }
 
@@ -25,11 +48,11 @@ void handle_currency_selection()
         if (scanf("%d", &selected_currency) != 1) 
         {
             while (getchar() != '\n'); 
-            printf("\n" RED "Invalid choice. Please enter a number between 1 and 3.\n" RESET_COLOR);
+            printf("\n" RED "Invalid choice. Please enter a number between 1 and 4.\n" RESET_COLOR);
         } 
-        else if (selected_currency < 1 || selected_currency > 3) 
+        else if (selected_currency < 1 || selected_currency > 4) 
         {
-            printf("\n" RED "Invalid choice. Please enter a number between 1 and 3.\n" RESET_COLOR);
+            printf("\n" RED "Invalid choice. Please enter a number between 1 and 4.\n" RESET_COLOR);
         } 
         else 
         {
@@ -41,17 +64,15 @@ void handle_currency_selection()
     {
         case 1:
             printf("\n" "You selected option 1 " BLUE "USD " RESET_COLOR);
-            display_conversion_target_options(); 
-            handle_conversion_target();
             break;
         case 2:
             printf("\n" "You selected option 2 " YELLOW "EUR " RESET_COLOR);
-            display_conversion_target_options(); 
-            handle_conversion_target();
             break;
         case 3:
-            display_conversion_target_options(); 
-            handle_conversion_target();
+            printf("\n" "You selected option 3 " RED "DKK " RESET_COLOR);
+            break;
+        case 4:
+            exit_program = 1;
             break;
     }
 }
@@ -63,6 +84,8 @@ void handle_conversion_target()
 
     while (!valid_input_selected_target_currency)
     {
+        display_conversion_target_options(); 
+        
         if (scanf("%d", &selected_target_currency) != 1)
         {
             while (getchar() != '\n');
@@ -90,7 +113,13 @@ void handle_conversion_target()
             printf("\n" "You selected option 3 " RED "DKK " RESET_COLOR);
             break;
         case 4:
-            handle_currency_selection();
+            printf("\n" "Returning to main menu...\n");
+            step = 1;
             break;
     }
+}
+
+void handle_currency_input()
+{
+    display_currency_value_input();
 }

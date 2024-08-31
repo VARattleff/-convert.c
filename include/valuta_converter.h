@@ -3,3 +3,4 @@
 void display_intro();
 void display_currency_options();
 void display_conversion_target_options();
+void display_currency_value_input();
