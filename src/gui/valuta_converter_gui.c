@@ -6,12 +6,32 @@
 
 void display_intro() 
 {
-    printf(BG_GREEN BLUE"bagrund og text farve \n");
-    printf("har arveet fra før\n" RESET_COLOR);
-    printf("er belvet resat\n");
+    printf( GREEN "-----------------------------------------------------------------------------------\n" RESET_COLOR);
 
-    print_danish_flag();
-    print_eu_flag();
-    print_us_flag();
+    printf("   **       **   ******   **        *****        **         ****   ****   ******   \n");
+    printf("   **       **   **       **       **         **    **      **  ***  **   **       \n");
+    printf("   **   *   **   ******   **       **       ***      ***    **   *   **   ******   \n");
+    printf("   **  ***  **   **       **       **         **    **      **       **   **       \n");
+    printf("   ****   ****   ******   ******    *****        **         **       **   ******   \n");
+
+    printf( GREEN "-----------------------------------------------------------------------------------\n" RESET_COLOR);
+    printf("\n");
+
+    printf("Easily convert between the worlds most commonly used currencies:\n"); 
+    printf("\n");
+
+    print_all_flags();
+    printf("\n");
+
+    printf("-->");
+    printf( BLUE" USD " RESET_COLOR);
+    printf("(US Dollar / freedom unit)\n");
+
+    printf("-->");
+    printf( YELLOW" EUR " RESET_COLOR);
+    printf("(Euro)\n");
+
+    printf("--> ");
+    printf( RED"DKK " RESET_COLOR);
+    printf("(Danish Krone)\n");
 }
-
