@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include "colors.h"
 
-#include <stdio.h>
-#include "colors.h"
-
 void display_weight_intro() 
 {
     printf("\n" "Welcome to the Weight Converter!\n");
