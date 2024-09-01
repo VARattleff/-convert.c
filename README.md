@@ -1,13 +1,8 @@
 # convert opg 
 
-## Valuta Converter Projekt
-
-Dette er et simpelt program til at konvertere valutaer mellem forskellige enheder(usd, eur og dkk).
-
 ## Kompilering
 
 For at kompilere dette projekt på en ARM-baseret Mac M2, kan du bruge følgende kommando i terminalen:
-
 
 ```bash
 gcc \
