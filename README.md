@@ -8,16 +8,17 @@ Dette er et simpelt program til at konvertere valutaer mellem forskellige enhede
 
 For at kompilere dette projekt på en ARM-baseret Mac M2, kan du bruge følgende kommando i terminalen:
 
+
 ```bash
 gcc \
-src/core/converter.c \
+src/core/convert.c \
 src/core/utils.c \
-src/core/dkk/dkk_converter.c \
-src/core/eur/eur_converter.c \
-src/core/usd/usd_converter.c \
-src/gui/dkk/dkk_ui.c \
-src/gui/eur/eur_ui.c \
-src/gui/usd/usd_ui.c \
+src/core/weight/weight_converter.c \
+src/core/time/time_converter.c \
+src/core/valuta/valuta_converter.c \
+src/gui/weight_gui.c \
+src/gui/convert_gui.c \
+src/gui/time_gui.c \
 src/gui/valuta_converter_gui.c \
--Iinclude -o valuta_converter
+-Iinclude -o convert
 ```

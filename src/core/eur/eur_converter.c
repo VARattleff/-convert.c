@@ -1,1 +1,0 @@
-//converterings logik osv

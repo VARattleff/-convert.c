@@ -1,3 +1,5 @@
+#define COLORS_H
+
 #define WHITE   "\033[37m"
 #define BLACK   "\033[30m"
 #define GREEN   "\033[32m"

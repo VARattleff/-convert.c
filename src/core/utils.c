@@ -1,56 +1,34 @@
 #include "colors.h"
 #include <stdio.h>
 
-void print_danish_flag() 
+void print_invalid_choice()
 {
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
-    printf(BG_WHITE "    " BG_WHITE "  " BG_WHITE "      "  RESET "\n");
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
-    printf("\n");
+    printf("\n\n" RED "Invalid choice.\n" RESET_COLOR);
 }
 
-void print_eu_flag() 
+void print_return_to_main_menu() 
 {
-    printf(BG_BLUE "    " YELLOW " * " BG_BLUE "    " BG_BLUE " " RESET "\n");
-    printf(BG_BLUE " " YELLOW " *     * " BG_BLUE " " BG_BLUE " " RESET "\n");
-    printf(BG_BLUE "    " YELLOW "   " BG_BLUE "    " BG_BLUE " " RESET "\n");
-    printf(BG_BLUE " " YELLOW " *     * " BG_BLUE " " BG_BLUE " " RESET "\n");
-    printf(BG_BLUE "    " YELLOW " * " BG_BLUE "    " BG_BLUE " " RESET "\n");
-    printf("\n");
+    printf("\nReturning to main menu...\n");
+    
 }
 
-void print_us_flag() 
+int get_int_value()
 {
-    printf(BG_BLUE "    " BG_RED "        " RESET "\n");
-    printf(BG_BLUE "    " BG_WHITE "        " RESET "\n");
-    printf(BG_RED "            " RESET "\n");
-    printf(BG_WHITE "            " RESET "\n");
-    printf(BG_RED "            " RESET "\n");
-    printf("\n");
+    int number;
+    scanf("%d", &number);
+    return number;
 }
 
-void print_all_flags()
+char get_char_value()
 {
-    printf(BG_BLUE "    " BG_RED "        " RESET "\t"); 
-    printf(BG_BLUE "    " YELLOW " * " BG_BLUE "    " BG_BLUE " " RESET "\t");
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
+    char character;
+    scanf(" %c", &character); 
+    return character;
+}
 
-    printf(BG_BLUE "    " BG_WHITE "        " RESET "\t");
-    printf(BG_BLUE " " YELLOW " *     * " BG_BLUE " " BG_BLUE " " RESET "\t");
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
-
-    printf(BG_RED "            " RESET "\t");
-    printf(BG_BLUE "    " YELLOW "   " BG_BLUE "    " BG_BLUE " " RESET "\t");
-    printf(BG_WHITE "    " BG_WHITE "  " BG_WHITE "      "  RESET "\n");
-
-    printf(BG_WHITE "            " RESET "\t");
-    printf(BG_BLUE " " YELLOW " *     * " BG_BLUE " " BG_BLUE " " RESET "\t");
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
-
-    printf(BG_RED "            " RESET "\t");
-    printf(BG_BLUE "    " YELLOW " * " BG_BLUE "    " BG_BLUE " " RESET "\t");
-    printf(BG_RED "  " BG_WHITE "  " BG_RED "        "  RESET "\n");
-
+float get_float_value()
+{
+    float number;
+    scanf("%f", &number);
+    return number;
 }
